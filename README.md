@@ -23,5 +23,10 @@
    * [polynomial.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%202/polynomial.cpp)
 
 ---
-   * [source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%202/source.cpp)
+   * [source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%202/Source.cpp)
+
+---
+   * [fraction.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Assignment/fraction/fraction.h)
+   * [fraction.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Assignment/fraction/fraction.cpp)
+
 
