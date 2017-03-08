@@ -11,9 +11,9 @@
 ### TestCandidate
    * [Birthday.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/Birthday.h)
    * [Birthday.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/Birthday.cpp)
-   * [Candidate.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/TestCandidate.h)
+   * [Candidate.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/Candidate.h)
    * [Candidate.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/Candidate.cpp)
-   * [TestCandidate.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/Candidate.h)
+   * [TestCandidate.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/TestCandidate.h)
    * [TestCandidate.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/TestCandidate.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%201/TestCandidate/Source.cpp)
 
