@@ -136,7 +136,6 @@ Polynomial Polynomial::Multiply(Polynomial &x)
       product.mpMonomial[i].SetMonomial(0, i);
    }
 
-   int co;
    for(int i = 0; i < mMaxIndex; i++)
    {
       for(int j = 0; j < x.mMaxIndex; j++)
