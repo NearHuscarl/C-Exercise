@@ -9,7 +9,6 @@ class Monomial
    public:
       Monomial(int co = 1, int ix = 1);
       void Input();
-      void CoefficientInput();
       void Output();
       void SetMonomial(int co, int ix);
       void SetIndex(int ix);

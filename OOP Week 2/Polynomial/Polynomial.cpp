@@ -25,6 +25,19 @@ Polynomial::~Polynomial()
 {
    delete [] mpMonomial;
 }
+
+Polynomial& Polynomial::operator=(const Polynomial &x)
+{
+   mMaxIndex = x.mMaxIndex;
+   delete [] mpMonomial;
+   mpMonomial = new Monomial[mMaxIndex];
+   for(int i = 0; i < mMaxIndex; i++)
+   {
+      mpMonomial[i].SetMonomial(x.mpMonomial[i].GetCoefficient(), i);
+   }
+   return *this;
+}
+
 void Polynomial::Input(void)
 {
    cout << "Enter the maximum index: ";
@@ -33,7 +46,10 @@ void Polynomial::Input(void)
 
    for(int i = 0; i < mMaxIndex; i++)
    {
-      mpMonomial[i].CoefficientInput();
+      int k;
+      cout << "Coefficient Input: ";
+      cin >> k;
+      mpMonomial[i].SetCoefficient(k);
       mpMonomial[i].SetIndex(i);
    }
 }
@@ -52,10 +68,12 @@ void Polynomial::Output(void)
 Polynomial Polynomial::Inverse(void)
 {
    Polynomial pInvert;
+   pInvert.mMaxIndex = mMaxIndex;
+   pInvert.mpMonomial = new Monomial[pInvert.mMaxIndex];
    for(int i = 0; i < mMaxIndex; i++)
    {
-      int coInvert = mpMonomial[i].GetCoefficient() * -1;
-      pInvert.mpMonomial[i].SetCoefficient(coInvert);
+      int coInvert = mpMonomial[i].GetCoefficient() * (-1);
+      pInvert.mpMonomial[i].SetMonomial(coInvert, i);
    }
    return pInvert;
 }
@@ -85,17 +103,14 @@ Polynomial Polynomial::Add(Polynomial &x)
       int coSum = x.mpMonomial[i].GetCoefficient() + mpMonomial[i].GetCoefficient();
       sum.mpMonomial[i].SetMonomial(coSum, i);
    }
-   if(flag)
+   for(int i = smallIndex; i < bigIndex; i++)
    {
-      for(int i = smallIndex; i < bigIndex; i++)
+      if(flag)
       {
          int coSum = mpMonomial[i].GetCoefficient();
          sum.mpMonomial[i].SetMonomial(coSum, i);
       }
-   }
-   else
-   {
-      for(int i = smallIndex; i < bigIndex; i++)
+      else
       {
          int coSum = x.mpMonomial[i].GetCoefficient();
          sum.mpMonomial[i].SetMonomial(coSum, i);
@@ -112,14 +127,21 @@ Polynomial Polynomial::Subtract(Polynomial &x)
 
 Polynomial Polynomial::Multiply(Polynomial &x)
 {
-   Polynomial product(mMaxIndex*x.mMaxIndex);
+   Polynomial product;
+   product.mMaxIndex = mMaxIndex * x.mMaxIndex;
+   product.mpMonomial = new Monomial[product.mMaxIndex];
 
-   int proC = 0;
+   for(int i = 0; i < product.mMaxIndex; i++)
+   {
+      product.mpMonomial[i].SetMonomial(0, i);
+   }
+
+   int co;
    for(int i = 0; i < mMaxIndex; i++)
    {
-      for(int j = 0; j < x.mMaxIndex; j++, proC++)
+      for(int j = 0; j < x.mMaxIndex; j++)
       {
-         product.mpMonomial[proC] = mpMonomial[i].Multiply(x.mpMonomial[j]);
+         product.mpMonomial[i+j] = product.mpMonomial[i+j].Add(mpMonomial[i].Multiply(x.mpMonomial[j]));
       }
    }
    return product;

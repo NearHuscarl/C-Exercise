@@ -17,19 +17,16 @@ void Monomial::Input(void)
    cin >> mIndex;
 }
 
-void Monomial::CoefficientInput(void)
-{
-   cout << "Coefficient Input: ";
-   cin >> mCoefficient;
-}
-
 void Monomial::Output(void)
 {
-   if(mIndex < 0)
+   if(mCoefficient < 0)
    {
       cout << "(" << mCoefficient << ")X^" << mIndex;
    }
-   cout << mCoefficient << "X^" << mIndex;
+   else
+   {
+      cout << mCoefficient << "X^" << mIndex;
+   }
 }
 
 int Monomial::GetCoefficient(void)
