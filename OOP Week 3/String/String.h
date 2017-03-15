@@ -17,7 +17,6 @@ class String
       bool Compare(String x);
       void Inverse();
       void Append(String x);
-
 };
 
 #endif //STRING_H 
