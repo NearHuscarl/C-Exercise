@@ -43,7 +43,7 @@ void String::Inverse(void)
    char temp;
    for(int i = 0, j = mLength-2;; i++, j--)
    {
-      if(j >= i)
+      if(j <= i)
       {
          break;
       }
