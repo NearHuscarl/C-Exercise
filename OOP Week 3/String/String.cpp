@@ -25,10 +25,7 @@ String::~String()
 
 void String::Append(String x)
 {
-   String temp;
-   temp.mLength = strlen(mpString) + 1;
-   temp.mpString = new char[temp.mLength];
-   strcpy(temp.mpString, mpString);
+   String temp(*this);
 
    mLength = strlen(mpString) + strlen(x.mpString) + 1;
    delete [] mpString;
