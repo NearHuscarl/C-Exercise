@@ -18,8 +18,6 @@ class CVector
       CVector Subtract(CVector &x);
       CVector Multiply(int k);
       int Multiply(CVector &x);
-
-
 };
 
 #endif //CVECTOR_H 
