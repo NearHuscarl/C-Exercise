@@ -63,6 +63,7 @@ CVector CVector::operator=(const CVector &x)
 
 CVector CVector::Add(CVector &x)
 {
+   //Missing exception handlers: Check whether they have the same number of dimension or not
    CVector sum;
    sum.mD = mD;
    sum.mpCoords = new int[sum.mD];
@@ -76,6 +77,7 @@ CVector CVector::Add(CVector &x)
 
 CVector CVector::Subtract(CVector &x)
 {
+   //Missing exception handlers: Check whether they have the same number of dimension or not
    CVector diff;
    diff.mD = mD;
    diff.mpCoords = new int[diff.mD];
@@ -102,6 +104,7 @@ CVector CVector::Multiply(int k)
 
 int CVector::Multiply(CVector &x)
 {
+   //Missing exception handlers: Check whether they have the same number of dimension or not
    int ScalarProduct = 0;
 
    for(int i = 0; i < mD; i++)
