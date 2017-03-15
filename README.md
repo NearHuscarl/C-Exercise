@@ -87,7 +87,7 @@
 ## OOP Week 3
 
 ### String
-   * [String.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/Source.h)
+   * [String.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/String.h)
    * [String.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/String.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/Source.cpp)
    
