@@ -93,6 +93,12 @@
    
 ---
 ### CVector
-   * [CVector.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector/CVector.h)
-   * [CVector.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector/CVector.cpp)
-   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector/Source.cpp)
+   * [CVector.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CVector.h)
+   * [CVector.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CVector.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CVector].cpp)
+
+---
+### CMatrix
+   * [CMatrix.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.h)
+   * [CMatrix.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CMatrix].cpp)
