@@ -1,11 +1,13 @@
 #ifndef CVECTOR_H
 #define CVECTOR_H
 
+class CMatrix;
+
 class CVector 
 {
    private:
       int mD;
-      int * mpCoords;
+      double * mpCoords;
    public:
       CVector();
       CVector(const CVector& x);
@@ -16,8 +18,9 @@ class CVector
       CVector operator=(const CVector &x);
       CVector Add(CVector &x);
       CVector Subtract(CVector &x);
-      CVector Multiply(int k);
-      int Multiply(CVector &x);
+      CVector Multiply(double k);
+      double Multiply(CVector &x);
+      friend CMatrix Multiply(const CMatrix &product, const CVector &v);
 };
 
 #endif //CVECTOR_H 
