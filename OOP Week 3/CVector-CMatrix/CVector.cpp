@@ -11,7 +11,7 @@ CVector::CVector():
 CVector::CVector(const CVector &x)
 {
    mD = x.mD;
-   mpCoords = new int[mD];
+   mpCoords = new double[mD];
    for(int i = 0; i < mD; i++)
    {
       mpCoords[i] = x.mpCoords[i];
@@ -27,7 +27,7 @@ void CVector::Input(void)
 {
    cout << "Dimension: ";
    cin >> mD;
-   mpCoords = new int[mD];
+   mpCoords = new double[mD];
    for(int i = 0; i < mD; i++)
    {
       cout << "Coordinate " << i+1 << " : ";
@@ -53,7 +53,7 @@ CVector CVector::operator=(const CVector &x)
 {
    delete [] mpCoords;
    mD = x.mD;
-   mpCoords = new int[mD];
+   mpCoords = new double[mD];
    for(int i = 0; i < mD; i++)
    {
       mpCoords[i] = x.mpCoords[i];
@@ -65,8 +65,12 @@ CVector CVector::Add(CVector &x)
 {
    CVector sum;
    sum.mD = mD;
-   sum.mpCoords = new int[sum.mD];
+   sum.mpCoords = new double[sum.mD];
 
+   if(sum.mD != mD)
+   {
+      throw, "Vectors dont have the same dimensions";
+   }
    for(int i = 0; i < mD; i++)
    {
       sum.mpCoords[i] = mpCoords[i] + x.mpCoords[i];
@@ -78,8 +82,12 @@ CVector CVector::Subtract(CVector &x)
 {
    CVector diff;
    diff.mD = mD;
-   diff.mpCoords = new int[diff.mD];
+   diff.mpCoords = new double[diff.mD];
 
+   if(diff.mD != mD)
+   {
+      throw, "Vectors dont have the same dimensions";
+   }
    for(int i = 0; i < mD; i++)
    {
       diff.mpCoords[i] = mpCoords[i] - x.mpCoords[i];
@@ -87,11 +95,11 @@ CVector CVector::Subtract(CVector &x)
    return diff;
 }
 
-CVector CVector::Multiply(int k)
+CVector CVector::Multiply(double k)
 {
    CVector product;
    product.mD = mD;
-   product.mpCoords = new int[product.mD];
+   product.mpCoords = new double[product.mD];
 
    for(int i = 0; i < mD; i++)
    {
@@ -100,10 +108,14 @@ CVector CVector::Multiply(int k)
    return product;
 }
 
-int CVector::Multiply(CVector &x)
+double CVector::Multiply(CVector &x)
 {
-   int ScalarProduct = 0;
+   double ScalarProduct = 0;
 
+   if(ScalarProduct.mD != mD)
+   {
+      throw, "Vectors dont have the same dimensions";
+   }
    for(int i = 0; i < mD; i++)
    {
       ScalarProduct+= mpCoords[i]* x.mpCoords[i];
