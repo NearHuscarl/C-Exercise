@@ -88,6 +88,11 @@ CMatrix CMatrix::operator=(const CMatrix &x)
 
 CMatrix CMatrix::Add(CMatrix &x)
 {
+   if(x.mRow != mRow || x.mCol != mCol)
+   {
+      throw invalid_argument("2 Matrices with 2 different size");
+   }
+
    CMatrix sum;
    sum.mRow = mRow;
    sum.mCol = mCol;
@@ -113,6 +118,11 @@ CMatrix CMatrix::Add(CMatrix &x)
 
 CMatrix CMatrix::Subtract(CMatrix &x)
 {
+   if(x.mRow != mRow || x.mCol != mCol)
+   {
+      throw invalid_argument("2 Matrices with 2 different size");
+   }
+
    CMatrix diff;
    diff.mRow = mRow;
    diff.mCol = mCol;
@@ -150,8 +160,13 @@ CMatrix CMatrix::Multiply(int k)
    return product;
 }
 
-CMatrix Multiply(const CMatrix &product, const CVector &v) 
+CMatrix Multiply(const CMatrix &m, const CVector &v) 
 {
+   CMatrix product(m);
+   if(v.mD != product.mCol)
+   {
+      throw invalid_argument("Vectors dont have the same dimensions");
+   }
 
    for(int i = 0; i < product.mRow; i++)
    {

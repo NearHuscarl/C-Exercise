@@ -63,14 +63,15 @@ CVector CVector::operator=(const CVector &x)
 
 CVector CVector::Add(CVector &x)
 {
+   if(x.mD != mD)
+   {
+      throw invalid_argument("Vectors dont have the same dimensions");
+   }
+
    CVector sum;
    sum.mD = mD;
    sum.mpCoords = new double[sum.mD];
 
-   if(sum.mD != mD)
-   {
-      throw, "Vectors dont have the same dimensions";
-   }
    for(int i = 0; i < mD; i++)
    {
       sum.mpCoords[i] = mpCoords[i] + x.mpCoords[i];
@@ -80,14 +81,15 @@ CVector CVector::Add(CVector &x)
 
 CVector CVector::Subtract(CVector &x)
 {
+   if(x.mD != mD)
+   {
+      throw invalid_argument("Vectors dont have the same dimensions");
+   }
+
    CVector diff;
    diff.mD = mD;
    diff.mpCoords = new double[diff.mD];
 
-   if(diff.mD != mD)
-   {
-      throw, "Vectors dont have the same dimensions";
-   }
    for(int i = 0; i < mD; i++)
    {
       diff.mpCoords[i] = mpCoords[i] - x.mpCoords[i];
@@ -110,12 +112,13 @@ CVector CVector::Multiply(double k)
 
 double CVector::Multiply(CVector &x)
 {
+   if(x.mD != mD)
+   {
+      throw invalid_argument("Matrix column != Vector dimension");
+   }
+
    double ScalarProduct = 0;
 
-   if(ScalarProduct.mD != mD)
-   {
-      throw, "Vectors dont have the same dimensions";
-   }
    for(int i = 0; i < mD; i++)
    {
       ScalarProduct+= mpCoords[i]* x.mpCoords[i];
