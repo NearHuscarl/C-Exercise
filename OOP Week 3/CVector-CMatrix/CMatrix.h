@@ -20,6 +20,7 @@ class CMatrix
       CMatrix operator=(const CMatrix &x);
       CMatrix Add(CMatrix &x);
       CMatrix Subtract(CMatrix &x);
+      CMatrix Multiply(CMatrix &x);
       CMatrix Multiply(int k);
       friend CMatrix Multiply(const CMatrix &product, const CVector &v);
 };

@@ -4,9 +4,16 @@
 
 using namespace std;
 
-CMatrix::CMatrix(int r, int col):
-   mpRow(nullptr)
+CMatrix::CMatrix(int r, int c):
+   mpRow(nullptr),
+   mRow(r),
+   mCol(c)
 {
+   mpRow = new double*[mRow];
+   for(int i = 0; i < mRow; i++)
+   {
+      mpRow[i] = new double[mCol];
+   }
 }
 
 CMatrix::CMatrix(const CMatrix &x)
@@ -92,19 +99,7 @@ CMatrix CMatrix::Add(CMatrix &x)
    {
       throw invalid_argument("2 Matrices with 2 different size");
    }
-
-   CMatrix sum;
-   sum.mRow = mRow;
-   sum.mCol = mCol;
-   sum.mpRow = new double*[mRow];
-   for(int i = 0; i < mRow; i++)
-   {
-      sum.mpRow[i] = new double[mCol];
-      for(int j = 0; j < mCol; j++)
-      {
-         sum.mpRow[i][j] = 0;
-      }
-   }
+   CMatrix sum(mRow, mCol);
 
    for(int i = 0; i < mRow; i++)
    {
@@ -122,19 +117,7 @@ CMatrix CMatrix::Subtract(CMatrix &x)
    {
       throw invalid_argument("2 Matrices with 2 different size");
    }
-
-   CMatrix diff;
-   diff.mRow = mRow;
-   diff.mCol = mCol;
-   diff.mpRow = new double*[mRow];
-   for(int i = 0; i < mRow; i++)
-   {
-      diff.mpRow[i] = new double[mCol];
-      for(int j = 0; j < mCol; j++)
-      {
-         diff.mpRow[i][j] = 0;
-      }
-   }
+   CMatrix diff(mRow, mCol);
 
    for(int i = 0; i < mRow; i++)
    {
@@ -176,4 +159,33 @@ CMatrix Multiply(const CMatrix &m, const CVector &v)
       }
    }
    return product;
+}
+
+CMatrix CMatrix::Multiply(CMatrix &x)
+{
+   if(mRow != mCol || x.mRow != x.mCol)
+   {
+      throw invalid_argument("Matrices must has the same column and row to multiply");
+   }
+   else
+   {
+      CMatrix product(mRow, mCol);
+
+      int length = mRow;
+      int sum = 0;
+
+      for(int i = 0; i < length; i++)
+      {
+         for(int j = 0; j < length; j++)
+         {
+            for(int h = 0; h < length; h++)
+            {
+               sum+= mpRow[i][h] * x.mpRow[h][j];
+               product.mpRow[i][j] = sum;
+            }
+            sum = 0;
+         }
+      }
+      return product;
+   }
 }
