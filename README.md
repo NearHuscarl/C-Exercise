@@ -85,7 +85,6 @@
 ### Chess
    * [Chessman.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessman.h)
    * [Chessman.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessman.cpp)
-
    * [King.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/King.h)
    * [King.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/King.cpp)
    * [Queen.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Queen.h)
@@ -98,30 +97,24 @@
    * [Rook.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Rook.cpp)
    * [Pawn.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Pawn.h)
    * [Pawn.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Pawn.cpp)
-
    * [Chessboard.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessboard.h)
    * [Chessboard.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessboard.cpp)
-
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Source.cpp)
 
 ---
 ### EmployeeList - Inheritance
    * [Birthday.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Birthday.h)
    * [Birthday.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Birthday.cpp)
-
    * [Employee.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Employee.h)
    * [Employee.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Employee.cpp)
-
    * [DayLaborer.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/DayLaborer.h)
    * [DayLaborer.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/DayLaborer.cpp)
    * [ProductionWorker.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/ProductionWorker.h)
    * [ProductionWorker.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/ProductionWorker.cpp)
    * [Manager.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Manager.h)
    * [Manager.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Manager.cpp)
-
    * [Congty.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Congty.h)
    * [Congty.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Congty.cpp)
-
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Source.cpp)
 
 ---
@@ -150,7 +143,6 @@
 ### Weapon
    * [Weapon.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Weapon.h)
    * [Weapon.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Weapon.cpp)
-
    * [Artillery120.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Artillery120.h)
    * [Artillery120.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Artillery120.cpp)
    * [Controller.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Controller.h)
@@ -159,5 +151,4 @@
    * [MachineGun127.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun127.cpp)
    * [MachineGun762.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun762.h)
    * [MachineGun762.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun762.cpp)
-
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Source.cpp)
