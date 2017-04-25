@@ -61,8 +61,70 @@
    * [Polynomial.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%202/Polynomial/Polynomial.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%202/Polynomial/Source.cpp)
 
+## OOP Week 3
+
+### String
+   * [String.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/String.h)
+   * [String.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/String.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/Source.cpp)
+   
+---
+### CVector
+   * [CVector.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CVector.h)
+   * [CVector.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CVector.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CVector].cpp)
+
+---
+### CMatrix
+   * [CMatrix.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.h)
+   * [CMatrix.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CMatrix].cpp)
+
 ## Others
 
+### Chess
+   * [Chessman.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessman.h)
+   * [Chessman.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessman.cpp)
+
+   * [King.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/King.h)
+   * [King.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/King.cpp)
+   * [Queen.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Queen.h)
+   * [Queen.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Queen.cpp)
+   * [Bishop.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Bishop.h)
+   * [Bishop.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Bishop.cpp)
+   * [Knight.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Knight.h)
+   * [Knight.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Knight.cpp)
+   * [Rook.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Rook.h)
+   * [Rook.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Rook.cpp)
+   * [Pawn.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Pawn.h)
+   * [Pawn.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Pawn.cpp)
+
+   * [Chessboard.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessboard.h)
+   * [Chessboard.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Chessboard.cpp)
+
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Chess/Source.cpp)
+
+---
+### EmployeeList - Inheritance
+   * [Birthday.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Birthday.h)
+   * [Birthday.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Birthday.cpp)
+
+   * [Employee.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Employee.h)
+   * [Employee.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Employee.cpp)
+
+   * [DayLaborer.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/DayLaborer.h)
+   * [DayLaborer.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/DayLaborer.cpp)
+   * [ProductionWorker.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/ProductionWorker.h)
+   * [ProductionWorker.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/ProductionWorker.cpp)
+   * [Manager.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Manager.h)
+   * [Manager.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Manager.cpp)
+
+   * [Congty.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Congty.h)
+   * [Congty.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Congty.cpp)
+
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList%20-%20Inheritance/Source.cpp)
+
+---
 ### EmployeeList
    * [Employee.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList/Employee.h)
    * [Employee.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/EmployeeList/Employee.cpp)
@@ -84,21 +146,18 @@
    * [Student.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Student/Student.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Student/Source.cpp)
 
-## OOP Week 3
-
-### String
-   * [String.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/String.h)
-   * [String.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/String.cpp)
-   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/String/Source.cpp)
-   
 ---
-### CVector
-   * [CVector.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CVector.h)
-   * [CVector.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CVector.cpp)
-   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CVector].cpp)
+### Weapon
+   * [Weapon.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Weapon.h)
+   * [Weapon.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Weapon.cpp)
 
----
-### CMatrix
-   * [CMatrix.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.h)
-   * [CMatrix.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.cpp)
-   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CMatrix].cpp)
+   * [Artillery120.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Artillery120.h)
+   * [Artillery120.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Artillery120.cpp)
+   * [Controller.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Controller.h)
+   * [Controller.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Controller.cpp)
+   * [MachineGun127.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun127.h)
+   * [MachineGun127.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun127.cpp)
+   * [MachineGun762.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun762.h)
+   * [MachineGun762.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun762.cpp)
+
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Source.cpp)
