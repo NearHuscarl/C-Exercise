@@ -6,13 +6,8 @@
 
 using namespace std;
 
-enum TargetType {
-   INFANTRY,
-   IFV,
-   TANK
-};
-
-Controller::Controller()
+Controller::Controller():
+   mChoice(-1)
 {
    RefreshTarget();
 }
@@ -34,12 +29,12 @@ void Controller::RefreshTarget(void)
    {
       targetList[i].pos.x = rand() % 100 + 0;
       targetList[i].pos.y = rand() % 100 + 0;
-      type                = rand() %   2 + 0;
-      if(type == INFANTRY)
+      type                = rand() % 100 + 0;
+      if(type < 40)
       {
          targetList[i].type = "Infantry";
       }
-      else if(type == IFV)
+      else if(40 <= type && type <= 70)
       {
          targetList[i].type = "IFV";
       }
@@ -57,7 +52,7 @@ void Controller::ShowTarget(void)
    srand(time(nullptr));
    dice = rand() % 100 + 1;
    //There is 20% chance that the enemy will start changing the maneuver
-   if(dice < 30)
+   if(dice < 40)
    {
       cout << "Enemy has changed maneuver" << endl;
       RefreshTarget();
@@ -82,6 +77,12 @@ void Controller::ShowTarget(int i)
 
 void Controller::ActivateButton()
 {
+   if(targetList.empty() || mChoice == -1)
+   {
+      cout << "There is currently no target" << endl;
+      return;
+   }
+
    MachineGun127 mg127;
    MachineGun762 mg762;
    Artillery120  ar120;
@@ -104,7 +105,7 @@ void Controller::ActivateButton()
    int dice;
    srand(time(nullptr));
    dice = rand() % 100 + 1;
-   if(dice < 80)
+   if(dice < 60)
    {
       targetList.erase(targetList.begin() + mChoice-1);
       cout << "Target " << mChoice << " has been eliminated" << endl;
