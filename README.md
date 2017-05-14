@@ -80,7 +80,7 @@
    * [CMatrix.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CMatrix].cpp)
 
-## OOP Week 3
+## OOP Week 4
 
 ### Quadrilateral
    * [Validation.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Validation.cpp)
