@@ -80,6 +80,26 @@
    * [CMatrix.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/CMatrix.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%203/CVector-CMatrix/Source[CMatrix].cpp)
 
+## OOP Week 3
+
+### Quadrilateral
+   * [Validation.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Validation.cpp)
+   * [Point.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Point.h)
+   * [Point.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Point.cpp)
+   * [Line.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Line.h)
+   * [Line.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Line.cpp)
+   * [Quadrilateral.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Quadrilateral.h)
+   * [Quadrilateral.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Quadrilateral.cpp)
+   * [Trapezium.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Trapezium.h)
+   * [Trapezium.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Trapezium.cpp)
+   * [Parellelogram.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Parellelogram.h)
+   * [Parellelogram.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Parellelogram.cpp)
+   * [Rectangle.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Rectangle.h)
+   * [Rectangle.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Rectangle.cpp)
+   * [Square.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Square.h)
+   * [Square.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Square.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/source.cpp)
+
 ## Others
 
 ### Chess
