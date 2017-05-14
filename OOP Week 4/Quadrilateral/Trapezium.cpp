@@ -54,7 +54,7 @@ void Trapezium::InitArea(void)
    }
    else //BC || DA
    {
-      float height = abs(B.GetX() - C.GetX());
+      float height = abs(B.GetY() - A.GetY());
       mArea = ( (BC.GetLength() + DA.GetLength()) * height ) / 2;
    }
 }
