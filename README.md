@@ -83,7 +83,7 @@
 ## OOP Week 4
 
 ### Quadrilateral
-   * [Validation.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Validation.cpp)
+   * [Validation.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Validation.h)
    * [Point.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Point.h)
    * [Point.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Point.cpp)
    * [Line.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Line.h)
@@ -92,8 +92,8 @@
    * [Quadrilateral.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Quadrilateral.cpp)
    * [Trapezium.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Trapezium.h)
    * [Trapezium.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Trapezium.cpp)
-   * [Parellelogram.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Parellelogram.h)
-   * [Parellelogram.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Parellelogram.cpp)
+   * [Parallelogram.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Parallelogram.h)
+   * [Parallelogram.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Parallelogram.cpp)
    * [Rectangle.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Rectangle.h)
    * [Rectangle.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Rectangle.cpp)
    * [Square.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Square.h)
