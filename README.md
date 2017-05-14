@@ -152,3 +152,7 @@
    * [MachineGun762.h](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun762.h)
    * [MachineGun762.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/MachineGun762.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Other/Weapon/Source.cpp)
+
+## Linked List
+
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Linked%20List/Source.cpp)
