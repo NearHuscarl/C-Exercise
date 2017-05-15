@@ -6,9 +6,6 @@
 //    Time Created: Sunday 2017-05-14 6:17:43 PM
 // ------------------------------------------------------------
 
-#include "Point.h"
-#include "Quadrilateral.h"
-#include "Rectangle.h"
 #include "Square.h"
 #include <iostream>
 #include <cmath>

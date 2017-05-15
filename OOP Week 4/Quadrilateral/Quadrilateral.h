@@ -27,6 +27,7 @@ class Quadrilateral
       Line DA;
 
       float mArea;
+      virtual bool IsValid() = 0;
    public:
       Quadrilateral();
       Quadrilateral(Point aA, Point aB, Point aC, Point aD);
@@ -36,13 +37,9 @@ class Quadrilateral
       void Output();
       virtual float GetArea() = 0;
    private:
-      virtual bool IsValid() = 0;
       virtual void InitArea() = 0;
 };
 
 #include "Trapezium.h"
-#include "Parallelogram.h"
-#include "Rectangle.h"
-#include "Square.h"
 
 #endif //QUADRILATERAL_H

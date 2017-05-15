@@ -9,7 +9,6 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "Point.h"
 #include "Rectangle.h"
 
 class Square: public Rectangle

@@ -9,7 +9,6 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "Point.h"
 #include "Parallelogram.h"
 
 class Rectangle: public Parallelogram
@@ -27,5 +26,7 @@ class Rectangle: public Parallelogram
    protected:
       bool IsValid();
 };
+
+#include "Square.h"
 
 #endif //RECTANGLE_H 

@@ -6,9 +6,6 @@
 //    Time Created: Sunday 2017-05-14 5:50:43 PM
 // ------------------------------------------------------------
 
-#include "Point.h"
-#include "Quadrilateral.h"
-#include "Parallelogram.h"
 #include "Rectangle.h"
 #include <iostream>
 #include <cmath>
@@ -35,8 +32,9 @@ Rectangle::~Rectangle()
 
 bool Rectangle::IsValid(void)
 {
-   if(Parallelogram::IsValid() && AB.IsParellelOy() && CD.IsParellelOy() ||
-      Parallelogram::IsValid() && BC.IsParellelOy() && DA.IsParellelOy()
+   if(
+         Parallelogram::IsValid() && AB.IsParellelOy() && CD.IsParellelOy() ||
+         Parallelogram::IsValid() && BC.IsParellelOy() && DA.IsParellelOy()
      )
    {
       return true;

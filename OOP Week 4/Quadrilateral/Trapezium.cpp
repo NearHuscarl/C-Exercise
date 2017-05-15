@@ -6,11 +6,8 @@
 //    Time Created: Sunday 2017-05-14 9:32:16 PM
 // ------------------------------------------------------------
 
-#include "Point.h"
-#include "Quadrilateral.h"
 #include "Trapezium.h"
 #include <iostream>
-#include <string>
 #include <cmath>
 
 using namespace std;

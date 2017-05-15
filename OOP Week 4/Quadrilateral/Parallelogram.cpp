@@ -6,9 +6,6 @@
 //    Time Created: Sunday 2017-05-14 5:50:39 PM
 // ------------------------------------------------------------
 
-#include "Point.h"
-#include "Quadrilateral.h"
-#include "Trapezium.h"
 #include "Parallelogram.h"
 #include <iostream>
 #include <cmath>

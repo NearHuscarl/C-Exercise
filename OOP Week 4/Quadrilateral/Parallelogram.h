@@ -9,7 +9,6 @@
 #ifndef PARALLELOGRAM_H
 #define PARALLELOGRAM_H
 
-#include "Point.h"
 #include "Trapezium.h"
 
 class Parallelogram: public Trapezium
@@ -27,5 +26,7 @@ class Parallelogram: public Trapezium
    protected:
       bool IsValid();
 };
+
+#include "Rectangle.h"
 
 #endif //PARALLELOGRAM_H 

@@ -6,12 +6,9 @@
 //    Time Created: Sunday 2017-05-07 12:16:40 PM
 // ------------------------------------------------------------
 
-#include "Point.h"
-#include "Line.h"
 #include "Quadrilateral.h"
 #include <iostream>
 #include <iomanip>
-#include <string>
 
 using namespace std;
 

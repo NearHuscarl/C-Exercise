@@ -9,9 +9,7 @@
 #ifndef TRAPAZIUM_H
 #define TRAPAZIUM_H
 
-#include "Point.h"
 #include "Quadrilateral.h"
-#include <string>
 
 class Trapezium: public Quadrilateral
 {
@@ -29,5 +27,6 @@ class Trapezium: public Quadrilateral
       bool IsValid();
 };
 
+#include "Parallelogram.h"
 
 #endif //TRAPAZIUM_H 
