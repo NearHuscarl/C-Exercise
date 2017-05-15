@@ -46,8 +46,9 @@ Node* CreateNode(int data)
    {
       node->info = data;
       node->pNext = nullptr;
+      return node;
    }
-   return node;
+   return nullptr;
 }
 
 void AddHead(List &list, Node* node)
@@ -76,30 +77,45 @@ void AddTail(List &list, Node* node)
    }
 }
 
-// Insert Node data before Node key in the list
-void InsertBeforeQ(List &list, Node *data, Node *key)
+// Insert Node newNode before Node key in the list
+void InsertBeforeNode(List &list, Node *newNode, Node *key)
 {
 }
 
-// Insert Node data after Node Q in the list
-void InsertAfterQ(List &list, Node *data, Node *Q)
+// Insert Node newNode after Node key in the list
+void InsertAfterNode(List &list, Node *newNode, Node *key)
 {
-   if(Q) // Q is not Null
+   if(key) // key is not Null //??? why not loop
    {
-      data->pNext = Q->pNext; // Node data is inserted in Node Q position
-      Q->pNext = data;        // Node Q now point to Node data
-      if(list.pTail == Q)
+      newNode->pNext = key->pNext; // Node newNode is inserted in Node key position
+      key->pNext = newNode;        // Node key now point to Node newNode
+      if(list.pTail == key)
       {
-         AddTail(list, data)
+         list.pTail = newNode;
       }
    }
    else 
    {
-      AddHead(list, data);
+      AddHead(list, newNode); //??? why use if-else
    }
 }
 
-// (1)
+void InsertNodeInSortedList(List &list, Node *newNode)
+{
+   if(newNode->info < list.pHead->info)
+   {
+      AddHead(list, newNode);
+   }
+   else if(newNode->info > list.pTail->info)
+   {
+      AddTail(list, newNode);
+   }
+   else
+   {
+
+   }
+}
+
 void InputList(List &list)
 {
    int total, data;
@@ -146,7 +162,7 @@ bool RemoveHead(List &list)
    else //List has 2+ elements
    {
       Node* node = list.pHead;
-      pHead = pHead->pNext;
+      list.pHead = list.pHead->pNext;
       delete node;
    }
    return true;
@@ -166,9 +182,9 @@ bool RemoveTail(List &list)
    }
    else //List has 2+ elements
    {
-      Node* node = list.pTail;
+      Node* node = list.pHead;
 
-      while(node->pNext != nullptr)
+      while(node->pNext != list.pTail)
       {
          node = node->pNext;
       }
@@ -188,6 +204,62 @@ bool IsInList(List list, int key)
       }
    }
    return false;
+}
+
+//Remove the Node after Node node
+bool RemoveAfter(List &list, Node *node)
+{
+   if(!list.pHead) //List is empty
+   {
+      return false;
+   }
+
+   Node *nextNode = node->pNext;
+   if(nextNode)
+   {
+      node->pNext = nextNode->pNext;
+      delete nextNode;
+   }
+}
+
+//Remove Node that holds data in the list
+bool RemoveData(List &list, int data)
+{
+   if(!list.pHead) //List is empty
+   {
+      return false;
+   }
+
+   Node *result = list.pHead;
+   Node *before = nullptr;
+
+   while(result->info != data)
+   {
+      before = result;
+      result = result->pNext;
+   }
+   if(result == list.pHead)
+   {
+      RemoveHead(list);
+   }
+   else
+   {
+      RemoveAfter(list, before);
+   }
+   return true;
+}
+
+void RemoveList(List &list)
+{
+   Node *i = list.pHead;
+
+   while(list.pHead)
+   {
+      i = i->pNext;
+      delete list.pHead;
+      list.pNext = i;
+   }
+   list.pNext = list.pTail = nullptr;
 }
 
 int PrintNodeCount(List list)
@@ -215,27 +287,6 @@ int PrintMaxValue(List list)
    return max;
 }
 
-void Insert(List &l,Node*p )
-{
-   int x;
-   int y;
-   cout << "\n x:";
-   cin >> x;
-   cout << "\n y:";
-   cin >> y;
-   p = CreateNode(y);
-
-   for(Node*k=l.pHead; k!=nullptr; k=k->pNext)
-   {
-      if(IsInList(l,x))
-      {
-         InsertAfterQ(l,p,k);
-
-      }
-   }
-
-}
-
 int PrintMinValue(List list)
 {
    int min = INT_MAX;
@@ -259,19 +310,6 @@ void PrintList(List &list)
    cout << endl;
 }
 
-void DeleteList(List &list)
-{
-   Node *i = list.pHead;
-
-   while(list.pHead)
-   {
-      i = i->pNext;
-      delete list.pHead;
-      list.pHead = i;
-   }
-   list.pHead = list.pTail = nullptr;
-}
-
 int main()
 {
    List l;
@@ -287,7 +325,3 @@ int main()
    cin.get();
    return 0;
 }
-
-// (1) InputList()
-// line 167 wtf
-// removehead() and removetail() are terribu
