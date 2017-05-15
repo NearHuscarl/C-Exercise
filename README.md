@@ -83,7 +83,7 @@
 ## OOP Week 4
 
 ### Person
-   * [Validation.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Person/ValidArtistation.h)
+   * [Validation.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Person/Validation.h)
    * [Birthday.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Person/Birthday.h)
    * [Birthday.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Person/Birthday.cpp)
    * [Person.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Person/Person.h)
