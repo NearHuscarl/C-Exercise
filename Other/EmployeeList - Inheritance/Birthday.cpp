@@ -1,6 +1,7 @@
 #include <iostream>
-#include "Birthday.h"
 #include <iomanip>
+#include <climits>
+#include "Birthday.h"
 
 using namespace std;
 
@@ -15,30 +16,54 @@ void Birthday::Input()
 {
    cout << "Day: ";
    cin >> day;
+
    while(!IsValidDay())
    {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
       cout << "Invalid Day. Enter again" << endl;
       cout << "Day: ";
       cin >> day;
    }
    cout << "Month: ";
    cin >> month;
+
    while(!IsValidMonth())
    {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
       cout << "Invalid Month. Enter again" << endl;
       cout << "Month: ";
       cin >> month;
    }
    cout << "Year: ";
    cin >> year;
+
    while(!IsValidYear())
    {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
       cout << "Invalid Year. Enter again" << endl;
       cout << "Year: ";
       cin >> year;
    }
+
    while(!IsValidDate())
    {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
       cout << "Invalid Date. Enter again" << endl;
       Input();
    }
@@ -74,9 +99,9 @@ void Birthday::SetYear(int x)
    year = x;
 }
 
-ostream& operator<<(ostream& x, Birthday& b)
+void Birthday::Output()
 {
-   return x << setfill('0') << setw(2) << b.day << "/" << setw(2) << b.month << "/" << setw(4) << b.year << setfill(' ');
+   cout << setfill('0') << setw(2) << day << "/" << setw(2) << month << "/" << setw(4) << year << setfill(' ');
 }
 
 
@@ -106,7 +131,7 @@ bool Birthday::IsValidMonth(void)
 
 bool Birthday::IsValidYear(void)
 {
-   if(year < 0)
+   if(year < 0 || cin.fail())
    {
       return false;
    }

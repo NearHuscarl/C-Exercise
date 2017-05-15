@@ -2,23 +2,33 @@
 #define BIRTHDAY_H
 
 #include <iostream>
-#include <windows.h>
 
 using namespace std;
 
 class Birthday 
 {
    private:
-      short day;
-      short month;
-      short year;
-      void gotoXY(int x, int y); 
-      int wherex();
-      int wherey();
+      int day;
+      int month;
+      int year;
+      bool IsLeapYear();
+      int MaxDayInMonth(int);
+
+      bool IsValidDay();
+      bool IsValidMonth();
+      bool IsValidYear();
+      bool IsValidDate();
    public:
-      friend ostream& operator<<(ostream& x, Birthday& b);
+      Birthday(int d = 0, int m = 0, int y = 0);
       void Input();
       void Output();
+      int GetDay();
+      int GetMonth();
+      int GetYear();
+      void SetDay(int);
+      void SetMonth(int);
+      void SetYear(int);
+      friend class Menu;
 };
 
 #endif //BIRTHDAY_H 

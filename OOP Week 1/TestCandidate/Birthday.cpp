@@ -1,50 +1,177 @@
 #include <iostream>
-#include "Birthday.h"
 #include <iomanip>
-#include <windows.h>
+#include <climits>
+#include "Birthday.h"
 
 using namespace std;
 
-int Birthday::wherex()
+Birthday::Birthday(int d, int m, int y):
+   day(d),
+   month(m),
+   year(y)
 {
-   CONSOLE_SCREEN_BUFFER_INFO csbi;
-   if (!GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi))
-      return -1;
-   return csbi.dwCursorPosition.X;
 }
 
-int Birthday::wherey()
+void Birthday::Input()
 {
-   CONSOLE_SCREEN_BUFFER_INFO csbi;
-   if (!GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi))
-      return -1;
-   return csbi.dwCursorPosition.Y;
-}
-
-void Birthday::gotoXY(int column, int line)
-{
-   COORD coord;
-   coord.X = column;
-   coord.Y = line;
-   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-}
-
-void Birthday::Input(void)
-{
-   cout << endl;
-   cout << "Day input: ";
+   cout << "Day: ";
    cin >> day;
-   cout << "Month input: ";
+
+   while(!IsValidDay())
+   {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
+      cout << "Invalid Day. Enter again" << endl;
+      cout << "Day: ";
+      cin >> day;
+   }
+   cout << "Month: ";
    cin >> month;
-   cout << "Year input: ";
+
+   while(!IsValidMonth())
+   {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
+      cout << "Invalid Month. Enter again" << endl;
+      cout << "Month: ";
+      cin >> month;
+   }
+   cout << "Year: ";
    cin >> year;
+
+   while(!IsValidYear())
+   {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
+      cout << "Invalid Year. Enter again" << endl;
+      cout << "Year: ";
+      cin >> year;
+   }
+
+   while(!IsValidDate())
+   {
+      if(cin.fail())
+      {
+         cin.clear();
+         cin.ignore(INT_MAX, '\n');
+      }
+      cout << "Invalid Date. Enter again" << endl;
+      Input();
+   }
 }
-void Birthday::Output(void)
+
+int Birthday::GetDay()
+{
+   return day;
+}
+
+int Birthday::GetMonth()
+{
+   return month;
+}
+
+int Birthday::GetYear()
+{
+   return year;
+}
+
+void Birthday::SetDay(int x)
+{
+   day = x;
+}
+
+void Birthday::SetMonth(int x)
+{
+   month = x;
+}
+
+void Birthday::SetYear(int x)
+{
+   year = x;
+}
+
+void Birthday::Output()
 {
    cout << setfill('0') << setw(2) << day << "/" << setw(2) << month << "/" << setw(4) << year << setfill(' ');
 }
 
-ostream& operator<<(ostream& x, Birthday& b)
+
+bool Birthday::IsValidDay(void)
 {
-   return x << setfill('0') << setw(2) << b.day << "/" << setw(2) << b.month << "/" << setw(4) << b.year << setfill(' ');
+   if(day > 31 || day < 1)
+   {
+      return false;
+   }
+   else
+   {
+      return true;
+   }
+}
+
+bool Birthday::IsValidMonth(void)
+{
+   if(month > 12|| month < 1)
+   {
+      return false;
+   }
+   else
+   {
+      return true;
+   }
+}
+
+bool Birthday::IsValidYear(void)
+{
+   if(year < 0 || cin.fail())
+   {
+      return false;
+   }
+   else
+   {
+      return true;
+   }
+}
+
+bool Birthday::IsLeapYear(void)
+{
+   if(year % 4 == 0)
+   {
+      if(year % 100 == 0)
+      {
+         if(year % 400 == 0)
+         {
+            return true;
+         }
+      }
+      return true;
+   }
+   return false;
+}
+
+int Birthday::MaxDayInMonth(int x)
+{
+   int mMaxDay[12] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+   if(IsLeapYear())
+   {
+      mMaxDay[1]++;
+   }
+   return mMaxDay[x-1];
+}
+
+bool Birthday::IsValidDate()
+{
+   if(IsValidDay() && IsValidMonth() && IsValidYear() && day <= MaxDayInMonth(month))
+   {
+      return 1;
+   }
+   return 0;
 }

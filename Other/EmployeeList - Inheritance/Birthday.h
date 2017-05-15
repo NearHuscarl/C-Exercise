@@ -21,13 +21,13 @@ class Birthday
    public:
       Birthday(int d = 0, int m = 0, int y = 0);
       void Input();
+      void Output();
       int GetDay();
       int GetMonth();
       int GetYear();
       void SetDay(int);
       void SetMonth(int);
       void SetYear(int);
-      friend ostream& operator<<(ostream& x, Birthday& b);
       friend class Menu;
 };
 
