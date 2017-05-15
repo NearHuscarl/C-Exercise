@@ -104,6 +104,10 @@ void Birthday::Output()
    cout << setfill('0') << setw(2) << day << "/" << setw(2) << month << "/" << setw(4) << year << setfill(' ');
 }
 
+ostream& operator<<(ostream &x, Birthday &b)
+{
+   return x << setfill('0') << setw(2) << b.day << "/" << setw(2) << b.month << "/" << setw(4) << b.year << setfill(' ');
+}
 
 bool Birthday::IsValidDay(void)
 {

@@ -22,6 +22,7 @@ class Birthday
       Birthday(int d = 0, int m = 0, int y = 0);
       void Input();
       void Output();
+      ostream& operator<<(ostream, Birthday)
       int GetDay();
       int GetMonth();
       int GetYear();
