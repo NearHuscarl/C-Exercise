@@ -82,6 +82,20 @@
 
 ## OOP Week 4
 
+### Cattle
+   * [Cattle.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Cattle.h)
+   * [Cattle.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Cattle.cpp)
+   * [Cow.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Cow.h)
+   * [Cow.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Cow.cpp)
+   * [Goat.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Goat.h)
+   * [Goat.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Goat.cpp)
+   * [Sheep.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Sheep.h)
+   * [Sheep.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Sheep.cpp)
+   * [Farm.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Farm.h)
+   * [Farm.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Farm.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Cattle/Source.cpp)
+
+---
 ### Person
    * [Validation.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Person/Validation.h)
    * [Birthday.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Person/Birthday.h)
