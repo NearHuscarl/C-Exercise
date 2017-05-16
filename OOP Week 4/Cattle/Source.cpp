@@ -24,9 +24,8 @@ int main()
    cout << "One day, the farmer leaves his farm for a while.\n";
    cout << "All of his cattle become hungry. When each of them is hungry,\n";
    cout << "they will make some sort of noise depending on which species they are:\n";
-   cout << "Cows will go Mooooo, Sheeps will go Baaa Baaa and Goats will go Maaa Maaa\n";
-   cout << "For some reasons, my teacher decided that he want me to write a function\n";
-   cout << "which will record all of the sound, so here it is anyway -___-\n";
+   cout << "Cows will go Mooooo, Sheeps will go Baaa and Goats will go Maaa\n";
+   cout << "Here is how it sounds when they are all hungry\n";
    cout << "*Sound starts playing*\n\n";
 
    f.PrintNoise();
