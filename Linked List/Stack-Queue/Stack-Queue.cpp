@@ -217,7 +217,7 @@ void main()
             break;
       }
 
-      while(!subChoice)
+      while(!subChoice && !choice)
       {
          if(choice == 1)
          {
@@ -271,6 +271,7 @@ void main()
          }
       }
       DeleteList(l);
+      subChoice = -1;
    }
 
    cin.get();
