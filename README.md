@@ -209,3 +209,4 @@
 ## Linked List
 
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Linked%20List/Source.cpp)
+   * [Stack-Queue.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Linked%20List/Stack-Queue/Stack-Queue.cpp)
