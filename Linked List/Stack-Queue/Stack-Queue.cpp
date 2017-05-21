@@ -83,22 +83,6 @@ bool RemoveHead(List &list, int &retrivedData)
    return true;
 }
 
-int RemoveHead(List&l, int&x)
-{
-   Node*p;
-   if(l.pHead!=nullptr)
-   {
-      p=l.pHead; 
-      x=p->info;  
-      l.pHead=l.pHead->pNext;
-      delete p;
-      if(l.pHead==nullptr)
-         l.pTail=nullptr;
-      return 1;
-   }
-   return 0;
-}
-
 void PrintList(List &list)
 {
    for(Node* i = list.pHead; i != nullptr; i = i->pNext)
