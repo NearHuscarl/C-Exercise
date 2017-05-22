@@ -210,3 +210,4 @@
 
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Linked%20List/Source.cpp)
    * [Stack-Queue.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Linked%20List/Stack-Queue/Stack-Queue.cpp)
+   * [Doubly Linked List.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/Linked%20List/Doubly%20Linked%20List.cpp)
