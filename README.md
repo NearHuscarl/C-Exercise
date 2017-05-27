@@ -133,6 +133,33 @@
    * [Square.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/Square.cpp)
    * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%204/Quadrilateral/source.cpp)
 
+## OOP Week 4
+
+### Book
+   * [Book.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Book.h)
+   * [Book.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Book.cpp)
+   * [Textbook.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Textbook.h)
+   * [Textbook.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Textbook.cpp)
+   * [Novel.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Novel.h)
+   * [Novel.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Novel.cpp)
+   * [Magazine.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Magazine.h)
+   * [Magazine.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Magazine.cpp)
+   * [Library.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Library.h)
+   * [Library.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Library.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Book/Source.cpp)
+
+---
+### Shape
+   * [Shape.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Shape.h)
+   * [Shape.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Shape.cpp)
+   * [Rectangle.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Rectangle.h)
+   * [Rectangle.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Rectangle.cpp)
+   * [Triangle.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Triangle.h)
+   * [Triangle.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Triangle.cpp)
+   * [Circle.h](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Circle.h)
+   * [Circle.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Circle.cpp)
+   * [Source.cpp](https://github.com/NearHuscarl/C-Exercise/blob/master/OOP%20Week%205/Shape/Source.cpp)
+
 ## Others
 
 ### Chess
