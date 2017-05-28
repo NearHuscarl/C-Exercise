@@ -34,7 +34,7 @@ CMatrix::CMatrix(const CMatrix &x)
 
 CMatrix::~CMatrix()
 {
-   delete [] mpRow;
+   ReleaseMemory();
 }
 
 void CMatrix::Input(void)
@@ -74,12 +74,21 @@ void CMatrix::Output(void)
    }
 }
 
+void CMatrix::ReleaseMemory(void)
+{
+   for(int i = 0; i < mRow; i++)
+   {
+      delete [] mpRow[i];
+   }
+   delete [] mpRow;
+}
+
 CMatrix CMatrix::operator=(const CMatrix &x)
 {
    mRow = x.mRow;
    mCol = x.mCol;
 
-   delete [] mpRow;
+   ReleaseMemory();
 
    mpRow = new double*[mRow];
    for(int i = 0; i < mRow; i++)

@@ -16,6 +16,7 @@ class CMatrix
 
       void Input();
       void Output();
+      void ReleaseMemory();
 
       CMatrix operator=(const CMatrix &x);
       CMatrix Add(CMatrix &x);
