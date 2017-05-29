@@ -7,15 +7,20 @@ class CDate
       int mDay;
       int mMonth;
       int mYear;
-   public:
-      CDate(int d=0, int m=0, int y=0);
-      void Input();
-      void Output();
+
       int MaxDayInMonth(int m = 1);
       bool IsLeapYear();
+      bool IsValidDay();
+      bool IsValidMonth();
       bool IsValidDate();
-      short IsGreater(CDate x);
-      short IsLess(CDate x);
+   public:
+      CDate(int d = 0, int m = 0, int y = 0);
+      ~CDate();
+
+      void Input();
+      void Output();
+      bool IsGreater(CDate x);
+      bool IsLess(CDate x);
       void NextDay();
       void PreviousDay();
       void Add(int n);

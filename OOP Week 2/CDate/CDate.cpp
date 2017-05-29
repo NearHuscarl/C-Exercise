@@ -23,7 +23,11 @@ void CDate::Input(void)
 
 void CDate::Output(void)
 {
-   cout << setfill('0') << setw(2) << mDay << "/" << setw(2) << mMonth << "/" << setw(4) << mYear << setfill(' ') << endl;
+   cout << setfill('0') << ;
+   cout << setw(2) << mDay << "/";
+   cout << setw(2) << mMonth << "/";
+   cout << setw(4) << mYear <<;
+   cout << setfill(' ') << endl;
 }
 
 bool CDate::IsLeapYear(void)
@@ -52,45 +56,63 @@ int CDate::MaxDayInMonth(int m)
    return mMaxDay[m-1];
 }
 
-bool CDate::IsValidDate(void)
+bool CDate::IsValidDay(void)
 {
-   if(1 <= mDay && mDay <= MaxDayInMonth(mMonth) && 1 <= mMonth && mMonth <= 12) 
+   if(1 <= mDay && mDay <= MaxDayInMonth(mMonth))
    {
       return true;
    }
    return false;
 }
 
-short CDate::IsGreater(CDate x)
+bool CDate::IsValidMonth(void)
+{
+   if(1 <= mMonth && mMonth <= 12)
+   {
+      return true;
+   }
+   return false;
+}
+
+bool CDate::IsValidDate(void)
+{
+   if(IsValidDay() && IsValidMonth()) 
+   {
+      return true;
+   }
+   return false;
+}
+
+bool CDate::IsGreater(CDate x)
 {
    if(mYear > x.mYear)
    {
-      return 1;
+      return true;
    }
    else if(mYear == x.mYear)
    {
       if(mMonth > x.mMonth)
       {
-         return 1;
+         return true;
       }
       else if(mMonth == x.mMonth)
       {
          if(mDay > x.mDay)
          {
-            return 1;
+            return true;
          }
          else if(mDay == x.mDay)
          {
-            return -1;
+            return false;
          }
-         return 0;
+         return false;
       }
-      return 0;
+      return false;
    }
-   return 0;
+   return false;
 }
 
-short CDate::IsLess(CDate x)
+bool CDate::IsLess(CDate x)
 {
    if(this->IsGreater(x) == 1 || this->IsGreater(x) == -1)
    {
@@ -102,11 +124,11 @@ short CDate::IsLess(CDate x)
 void CDate::NextDay()
 {
    mDay++;
-   if(!IsValidDate())
+   if(!IsValidDay())
    {
       mDay = 1;
       mMonth++;
-      if(!IsValidDate())
+      if(!IsValidMonth())
       {
          mMonth = 1;
          mYear++;
@@ -117,11 +139,10 @@ void CDate::NextDay()
 void CDate::PreviousDay()
 {
    mDay--;
-   if(!IsValidDate())
+   if(!IsValidDay())
    {
-      mDay = MaxDayInMonth(mMonth);
-      mMonth--;
-      if(!IsValidDate())
+      mDay = MaxDayInMonth(--mMonth);
+      if(!IsValidMonth())
       {
          mMonth = 12;
          mYear--;
