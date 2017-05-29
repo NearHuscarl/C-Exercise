@@ -6,25 +6,35 @@ using namespace std;
 
 int main()
 {
-   Complex cA, cB, cC;
+   Complex cA, cB;
 
    cin >> cA;
    cin >> cB;
+   cout << endl;
 
    cout << cA << endl;
-   cout << "Modulus of Complex Number A is: " << cA.Modulus() << endl;
+   cout << cB << endl;
+   cout << endl;
 
-   cC = cA + cB;
-   cout << cC << endl;
+   cout << "cA Modulus: " << cA.Modulus() << endl;
+   cout << "cB Modulus: " << cB.Modulus() << endl;
+   cout << endl;
 
-   cC = cA - cB;
-   cout << cC << endl;
+   cout << "cA + cB" << endl;
+   cout << cA + cB << endl;
+   cout << endl;
 
-   cC = cA * cB;
-   cout << cC << endl;
+   cout << "cA - cB" << endl;
+   cout << cA - cB << endl;
+   cout << endl;
 
-   cC = cA / cB;
-   cout << cC << endl;
+   cout << "cA * cB" << endl;
+   cout << cA * cB << endl;
+   cout << endl;
+
+   cout << "cA / cB" << endl;
+   cout << cA / cB << endl;
+   cout << endl;
 
    system("pause");
    return 0;

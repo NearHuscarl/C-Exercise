@@ -18,35 +18,35 @@ Fraction::~Fraction()
 istream& operator>>(istream& x, Fraction &f)
 {
    cout << "Numerator Input: ";
-   cin >> f.mNumerator;
+   x >> f.mNumerator;
    cout << "Denominator Input: ";
-   cin >> f.mDenominator;
+   x >> f.mDenominator;
    if(f.mDenominator == 0)
    {
       while(f.mDenominator == 0)
       {
          cout << "Invalid Input. mDenominator cant equal to zero. Try again" << endl;
          cout << "Denominator Input: ";
-         cin >>  f.mDenominator;
+         x >>  f.mDenominator;
       }
    }
    return x;
 }
 
-ostream& operator<<(ostream& x, Fraction f)
+ostream& operator<<(ostream& x, Fraction &f)
 {
    f.Simplify();
    if((f.mNumerator >= 0 && f.mDenominator > 0) || (f.mNumerator < 0 && f.mDenominator < 0))
    {
-      cout << abs(f.mNumerator) << "/" << abs(f.mDenominator) << endl;
+      x << abs(f.mNumerator) << "/" << abs(f.mDenominator);
    }
    else if(f.mNumerator >= 0 && f.mDenominator < 0)
    {
-      cout << -f.mNumerator << "/" << -f.mDenominator << endl;
+      x << -f.mNumerator << "/" << -f.mDenominator;
    }
    else
    {
-      cout << f.mNumerator << "/" << f.mDenominator << endl;
+      x << f.mNumerator << "/" << f.mDenominator;
    }
    return x;
 }
@@ -97,7 +97,7 @@ Fraction Fraction::Inverse(void)
    return temp;
 }
 
-Fraction Fraction::operator+(Fraction &x)
+Fraction Fraction::operator+(const Fraction &x)
 {
    Fraction sum;
    int lLCM = LCM(mDenominator, x.mDenominator);
@@ -108,7 +108,7 @@ Fraction Fraction::operator+(Fraction &x)
    return sum;
 }
 
-Fraction Fraction::operator-(Fraction &x)
+Fraction Fraction::operator-(const Fraction &x)
 {
    Fraction diff;
    int lLCM = LCM(mDenominator, x.mDenominator);
@@ -119,7 +119,7 @@ Fraction Fraction::operator-(Fraction &x)
    return diff;
 }
 
-Fraction Fraction::operator*(Fraction &x)
+Fraction Fraction::operator*(const Fraction &x)
 {
    Fraction product;
 
@@ -129,11 +129,11 @@ Fraction Fraction::operator*(Fraction &x)
    return product;
 }
 
-Fraction Fraction::operator/(Fraction &x)
+Fraction Fraction::operator/(const Fraction &x)
 {
    Fraction quotient;
 
-   if(x.mNumerator == 0)
+   if(!x.mNumerator)
    {
       throw, "Cant divide to 0";
    }

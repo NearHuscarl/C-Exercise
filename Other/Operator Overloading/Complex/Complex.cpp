@@ -33,7 +33,7 @@ ostream& operator<<(ostream &x, const Complex &c)
    return x << c.mRealNum << showpos << c.mImaginaryUnit << "i" << noshowpos; 
 }
 
-Complex Complex::operator+(Complex &x)
+Complex Complex::operator+(const Complex &x)
 {
    Complex sum;
    sum.mRealNum = mRealNum + x.mRealNum;
@@ -41,7 +41,7 @@ Complex Complex::operator+(Complex &x)
    return sum;
 }
 
-Complex Complex::operator-(Complex &x)
+Complex Complex::operator-(const Complex &x)
 {
    Complex diff;
    diff.mRealNum = mRealNum - x.mRealNum;
@@ -49,7 +49,7 @@ Complex Complex::operator-(Complex &x)
    return diff;
 }
 
-Complex Complex::operator*(Complex &x)
+Complex Complex::operator*(const Complex &x)
 {
    Complex product;
    product.mRealNum = mRealNum*x.mRealNum - mImaginaryUnit*x.mImaginaryUnit;
@@ -57,7 +57,7 @@ Complex Complex::operator*(Complex &x)
    return product;
 }
 
-Complex Complex::operator/(Complex &x)
+Complex Complex::operator/(const Complex &x)
 {
    Complex quotient;
    quotient.mRealNum = (mRealNum*x.mRealNum + mImaginaryUnit*x.mImaginaryUnit)/(x.mRealNum*x.mRealNum + x.mImaginaryUnit*x.mImaginaryUnit);

@@ -18,17 +18,22 @@ Date::~Date()
 istream& operator>>(istream &x, Date &d)
 {
    cout << "Day: ";
-   cin >> d.mDay;
+   x >> d.mDay;
    cout << "Month: ";
-   cin >> d.mMonth;
+   x >> d.mMonth;
    cout << "Year: ";
-   cin >> d.mYear;
+   x >> d.mYear;
    return x;
 }
 
 ostream& operator<<(ostream &x, const Date &d)
 {
-   return x << setfill('0') << setw(2) << d.mDay << "/" << setw(2) << d.mMonth << "/" << setw(4) << d.mYear << setfill(' ') << endl;
+   x << setfill('0');
+   x << setw(2) << d.mDay << "/";
+   x << setw(2) << d.mMonth << "/";
+   x << setw(4) << d.mYear;
+   x << setfill(' ') << endl;
+   return x;
 }
 
 bool Date::IsLeapYear(void)
@@ -47,26 +52,44 @@ bool Date::IsLeapYear(void)
    return false;
 }
 
-int Date::MaxDayInMonth(int m)
+int Date::MaxDayInMonth(int month)
 {
    int mMaxDay[12] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
    if(IsLeapYear())
    {
       mMaxDay[1]++;
    }
-   return mMaxDay[m-1];
+   return mMaxDay[month-1];
 }
 
-bool Date::IsValidDate(void)
+bool Date::IsValidDay(void)
 {
-   if(1 <= mDay && mDay <= MaxDayInMonth(mMonth) && 1 <= mMonth && mMonth <= 12) 
+   if(1 <= mDay && mDay <= MaxDayInMonth(mMonth))
    {
       return true;
    }
    return false;
 }
 
-bool Date::operator>(const Date x)
+bool Date::IsValidMonth(void)
+{
+   if(1 <= mMonth && mMonth <= 12)
+   {
+      return true;
+   }
+   return false;
+}
+
+bool Date::IsValidDate(void)
+{
+   if(IsValidDay() && IsValidMonth()) 
+   {
+      return true;
+   }
+   return false;
+}
+
+bool Date::operator>(const Date &x)
 {
    if(mYear > x.mYear)
    {
@@ -95,9 +118,9 @@ bool Date::operator>(const Date x)
    return false;
 }
 
-bool Date::operator<(const Date x)
+bool Date::operator<(const Date &x)
 {
-   if((*this).operator>(x))
+   if(*this > x)
    {
       return false;
    }
@@ -107,11 +130,11 @@ bool Date::operator<(const Date x)
 Date Date::operator++()
 {
    mDay++;
-   if(!IsValidDate())
+   if(!IsValidDay())
    {
       mDay = 1;
       mMonth++;
-      if(!IsValidDate())
+      if(!IsValidMonth())
       {
          mMonth = 1;
          mYear++;
@@ -131,11 +154,11 @@ Date Date::operator++(int)
 Date Date::operator--()
 {
    mDay--;
-   if(!IsValidDate())
+
+   if(!IsValidDay())
    {
-      mDay = MaxDayInMonth(mMonth);
-      mMonth--;
-      if(!IsValidDate())
+      mDay = MaxDayInMonth(--mMonth);
+      if(!IsValidMonth())
       {
          mMonth = 12;
          mYear--;
@@ -148,7 +171,7 @@ Date Date::operator--(int)
 {
    Date x(*this);
 
-   --(*this);
+   --*this;
    return x;
 }
 
@@ -158,7 +181,7 @@ Date Date::operator+(const int n)
 
    for(int i = 0; i < n; i++)
    {
-      x.operator++();
+      x++;
    }
    return x;
 }
@@ -169,28 +192,30 @@ Date Date::operator-(const int n)
 
    for(int i = 0; i < n; i++)
    {
-      x.operator--();
+      x--;
    }
    return x;
 }
 
 // False when two date at 2 different year
-int Date::operator-(Date x)
+int Date::operator-(const Date &x)
 {
+   Date rightOperand(x);
    int diff = 0;
-   if((*this).operator>(x))
+
+   if(*this > rightOperand)
    {
-      while((*this).operator>(x))
+      while(*this > rightOperand)
       {
-         x.operator++();
+         rightOperand++;
          diff++;
       }
    }
-   else if((*this).operator<(x))
+   else if(*this < rightOperand)
    {
-      while((*this).operator<(x))
+      while(*this < rightOperand)
       {
-         x.operator--();
+         rightOperand--;
          diff++;
       }
    }

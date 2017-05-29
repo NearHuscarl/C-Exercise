@@ -39,9 +39,9 @@ Matrix::~Matrix()
 istream& operator>>(istream &x, Matrix &m)
 {
    cout << "Row: ";
-   cin >> m.mRow;
+   x >> m.mRow;
    cout << "Column: ";
-   cin >> m.mCol;
+   x >> m.mCol;
 
    m.mpRow = new double*[m.mRow];
    for(int i = 0; i < m.mRow; i++)
@@ -50,7 +50,7 @@ istream& operator>>(istream &x, Matrix &m)
       for(int j = 0; j < m.mCol; j++)
       {
          cout << "Element " << i+1 << j+1 << ": ";
-         cin >> m.mpRow[i][j];
+         x >> m.mpRow[i][j];
       }
    }
    return x;
@@ -58,18 +58,18 @@ istream& operator>>(istream &x, Matrix &m)
 
 ostream& operator<<(ostream &x, const Matrix &m)
 {
-   cout << endl;
+   x << endl;
    for(int i = 0; i < m.mRow; i++)
    {
-      cout << "[";
+      x << "[";
       for(int j = 0; j < m.mCol; j++)
       {
          if(j == m.mCol - 1)
          {
-            cout << m.mpRow[i][j] << "]" << endl;
+            x << m.mpRow[i][j] << "]" << endl;
             break;
          }
-         cout << m.mpRow[i][j] << ", ";
+         x << m.mpRow[i][j] << ", ";
       }
    }
    return x;
@@ -103,7 +103,7 @@ Matrix Matrix::operator=(const Matrix &x)
    return *this;
 }
 
-Matrix Matrix::operator+(Matrix x)
+Matrix Matrix::operator+(const Matrix &x)
 {
    if(x.mRow != mRow || x.mCol != mCol)
    {
@@ -121,7 +121,7 @@ Matrix Matrix::operator+(Matrix x)
    return sum;
 }
 
-Matrix Matrix::operator-(Matrix x)
+Matrix Matrix::operator-(const Matrix &x)
 {
    if(x.mRow != mRow || x.mCol != mCol)
    {
@@ -153,7 +153,7 @@ Matrix Matrix::operator*(int k)
    return product;
 }
 
-Matrix Matrix::operator*(Matrix x)
+Matrix Matrix::operator*(const Matrix &x)
 {
    if(mRow != mCol || x.mRow != x.mCol)
    {

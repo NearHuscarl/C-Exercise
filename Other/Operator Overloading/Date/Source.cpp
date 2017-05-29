@@ -10,17 +10,22 @@ int main()
 
    cin >> cdA;
    cin >> cdB;
-   cout << cdA << endl;
-   cout << cdB << endl;
 
-   cout << cdA++ << endl;
-   cout << cdA-- << endl;
+   cout << endl;
+   cout << "cdA: " << cdA << endl;
+   cout << "cdB: " << cdB << endl;
 
-   cout << ++cdA << endl;
-   cout << --cdA << endl;
+   cout << "cdA++: " << cdA++ << endl;
+   cout << "cdA--: " << cdA++ << endl;
 
+   cout << "++cdB: " << ++cdB << endl;
+   cout << "--cdB: " << --cdB << endl;
+
+   cout << "cdA + 10" << endl;
    cout << cdA + 10 << endl;
+   cout << "cdB - 20" << endl;
    cout << cdA - 20 << endl;
+   cout << "cdA - cdB" << endl;
    cout << cdA - cdB << endl;
 
    system("pause");

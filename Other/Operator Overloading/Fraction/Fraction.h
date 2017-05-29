@@ -21,12 +21,12 @@ class Fraction
       Fraction Inverse();
 
       friend istream& operator>>(istream&, Fraction&); 
-      friend ostream& operator<<(ostream&, Fraction); 
+      friend ostream& operator<<(ostream&, Fraction&); 
 
-      Fraction operator+(Fraction&);
-      Fraction operator-(Fraction&);
-      Fraction operator*(Fraction&);
-      Fraction operator/(Fraction&);
+      Fraction operator+(const Fraction&);
+      Fraction operator-(const Fraction&);
+      Fraction operator*(const Fraction&);
+      Fraction operator/(const Fraction&);
 };
 
 #endif //FRACTION_H 

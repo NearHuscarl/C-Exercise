@@ -20,10 +20,10 @@ class Matrix
       friend ostream& operator<<(ostream&, const Matrix&);
       void ReleaseMemory();
 
-      Matrix operator=(const Matrix &x);
-      Matrix operator+(Matrix x);
-      Matrix operator-(Matrix x);
-      Matrix operator*(Matrix x);
+      Matrix operator=(const Matrix&);
+      Matrix operator+(const Matrix&);
+      Matrix operator-(const Matrix&);
+      Matrix operator*(const Matrix&);
       Matrix operator*(int k);
 };
 

@@ -1,6 +1,5 @@
 #include "Fraction.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -14,15 +13,19 @@ int main()
    cout << cA << endl;
    cout << cB << endl;
 
+   cout << "cA + cB:" << endl;
    cC = cA + cB;
    cout << cC << endl;
 
+   cout << "cA - cB:" << endl;
    cC = cA - cB;
    cout << cC << endl;
 
+   cout << "cA * cB:" << endl;
    cC = cA * cB;
    cout << cC << endl;
 
+   cout << "cA / cB:" << endl;
    cC = cA / cB;
    cout << cC << endl;
 

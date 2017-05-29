@@ -15,12 +15,14 @@ class Complex
       ~Complex();
 
       double Modulus();
+
       friend istream& operator>>(istream&, Complex&); 
       friend ostream& operator<<(ostream&, const Complex&); 
-      Complex operator+(Complex&);
-      Complex operator-(Complex&);
-      Complex operator*(Complex&);
-      Complex operator/(Complex&);
+
+      Complex operator+(const Complex&);
+      Complex operator-(const Complex&);
+      Complex operator*(const Complex&);
+      Complex operator/(const Complex&);
 };
 
 #endif //COMPLEX_H
