@@ -180,14 +180,14 @@ Fraction Fraction::operator++(int)
    Fraction temp(*this);
 
    mNumerator = mNumerator + mDenominator;
-   temp.Simplify();
+   this->Simplify();
    return temp;
 }
 
 Fraction Fraction::operator++(void)
 {
    mNumerator = mNumerator + mDenominator;
-   (*this).Simplify();
+   this->Simplify();
    return *this;
 }
 
@@ -196,7 +196,7 @@ Fraction Fraction::operator--(int)
    Fraction temp(*this);
 
    mNumerator = mNumerator - mDenominator;
-   temp.Simplify();
+   this->Simplify();
    return temp;
 }
 
