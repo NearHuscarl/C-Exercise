@@ -8,25 +8,43 @@ using namespace std;
 class Fraction 
 {
    private:
-      int mNumerator;
-      int mDenominator;
-      int LCM(int, int);
-      int GCD(int, int);
-   public:
-      Fraction(int n = 1, int d = 1);
-      ~Fraction();
+      long mNumerator;
+      long mDenominator;
 
+      long LCM(long, long);
+      long GCD(long, long);
       void Simplify();
-      void Reduce(Fraction);
-      Fraction Inverse();
+      void LCD(Fraction&, Fraction&);
+   public:
+      Fraction(long n, long);
+      Fraction(long k = 1);
+      ~Fraction();
 
       friend istream& operator>>(istream&, Fraction&); 
       friend ostream& operator<<(ostream&, Fraction&); 
 
-      Fraction operator+(const Fraction&);
-      Fraction operator-(const Fraction&);
-      Fraction operator*(const Fraction&);
-      Fraction operator/(const Fraction&);
+      Fraction operator-(void);
+      friend Fraction operator+(Fraction, Fraction);
+      friend Fraction operator-(Fraction, Fraction);
+      friend Fraction operator*(Fraction, Fraction);
+      friend Fraction operator/(Fraction, Fraction);
+
+      Fraction operator+=(Fraction);
+      Fraction operator-=(Fraction);
+      Fraction operator*=(Fraction);
+      Fraction operator/=(Fraction);
+
+      Fraction operator++(int);
+      Fraction operator++();
+      Fraction operator--(int);
+      Fraction operator--();
+
+      bool operator>(Fraction);
+      bool operator<(Fraction);
+      bool operator==(Fraction);
+      bool operator!=(Fraction);
+      bool operator>=(Fraction);
+      bool operator<=(Fraction);
 };
 
 #endif //FRACTION_H 
